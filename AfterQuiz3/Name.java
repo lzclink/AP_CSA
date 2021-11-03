@@ -1,5 +1,5 @@
 public class Name{
-    String first,middle,last;
+    private String first,middle,last;
     public Name(String f, String m, String l){
         first=f;
         middle=m;
@@ -21,12 +21,7 @@ public class Name{
         return last+", "+first+" "+middle;
     }
     public boolean equals(Name o){
-        if(first.equalsIgnoreCase(o.getFirst())&&middle.equalsIgnoreCase(o.getMiddle())&&last.equalsIgnoreCase(o.getLast())){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return first.equalsIgnoreCase(o.getFirst())&&middle.equalsIgnoreCase(o.getMiddle())&&last.equalsIgnoreCase(o.getLast());
     }
     public String initials(){
         return first.substring(0,1).toUpperCase()+middle.substring(0,1).toUpperCase()+last.substring(0,1).toUpperCase();
