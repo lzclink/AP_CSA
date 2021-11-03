@@ -1,0 +1,1 @@
+In this class, we learned about variable and basic compute signs.
