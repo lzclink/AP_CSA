@@ -14,7 +14,7 @@ public class bubbleSort{
                     ins=s[j];
                     s[j]=s[i];
                     s[i]=ins;
-                }
+                }   
             }
         }
         for(int i=1;i<=n;i++)

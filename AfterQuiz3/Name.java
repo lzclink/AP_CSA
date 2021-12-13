@@ -1,3 +1,4 @@
+import java.util.*;
 public class Name{
     private String first,middle,last;
     public Name(String f, String m, String l){
@@ -7,6 +8,10 @@ public class Name{
     }
     public String getFirst(){
         return first;
+    }
+    public int random100(){
+        Random rand=new Random();
+        return rand.nextInt(100)+1;
     }
     public String getMiddle(){
         return middle;
@@ -20,8 +25,13 @@ public class Name{
     public String lastFirstMiddle(){
         return last+", "+first+" "+middle;
     }
+
     public boolean equals(Name o){
-        return first.equalsIgnoreCase(o.getFirst())&&middle.equalsIgnoreCase(o.getMiddle())&&last.equalsIgnoreCase(o.getLast());
+        return this.firstMiddleLast().equalsIgnoreCase(o.firstMiddleLast());
+    }
+    
+    public static boolean eq(Name a, Name b){
+        return a.firstMiddleLast()==b.firstMiddleLast();
     }
     public String initials(){
         return first.substring(0,1).toUpperCase()+middle.substring(0,1).toUpperCase()+last.substring(0,1).toUpperCase();
